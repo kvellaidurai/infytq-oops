@@ -7,3 +7,47 @@ class Employee:
         self.salary=salary
 emp1=Employee("Jack",24,30000)
 emp2=Employee("Jill",27,40000)
+
+
+
+OOPS-ex-4
+
+class Athlete:
+    def __init__ (self,name,gender):
+        self.__name=name
+        self.__gender=gender
+
+    def running(self):
+        if(self.__gender=="girl"):
+            print("150mtr running")
+        else:
+            print("200mtr running")
+    def get__name(self):
+        return self.__name
+s1=Athlete("Maria","girl")
+s1.running()
+print(s1.get__name())
+    
+
+
+OOPS-assgn-4,5
+
+class Vehicle:
+    def __init__ (self,vehicle_id,vehicle_type,cost,premium_amount):
+        self.vehicle_id=vehicle_id
+        self.vehicle_type=vehicle_type
+        self.cost=cost
+        self.premium_amount=None
+    def calculate_premium_amount(self):
+        if(self.vehicle_type=="twowheeler"):
+            premium_percentage=2
+        else:
+            premium_percentage=6
+        self.premium_amount=self.cost+self.cost*premium_percentage/100
+        print(self.premium_amount)
+    
+        print("vehicle_id:"+str(self.vehicle_id)+" "+"vehicle_type:"+str(self.vehicle_type)+" "+"cost:"+str(self.cost)+" "+"premium_amount:"+str(self.premium_amount))
+s=Vehicle("DT201823","twowheeler",250000,1000)
+s.calculate_premium_amount()
+
+        
